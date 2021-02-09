@@ -1,0 +1,209 @@
+:root{
+    --enlaces: #ffffff;
+    --bordes: #d85775;
+    --linea: #50545f;
+}
+html{
+    box-sizing: border-box;
+}
+div{
+    margin: 0;
+}
+.hero{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+}
+.header{
+    height: 80px;
+}
+.menu{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-items{
+    width: 100%;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-menu{
+    display: none;
+}
+.menu-items li{
+    list-style: none;
+    margin: 0 4px;
+}
+.menu-items li a{
+    text-decoration: none;
+    color: var(--enlaces);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .5rem 1.4rem;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+.menu-items li a:hover{
+    border: 1px solid var(--bordes);
+}
+.menu-items form{
+    display: block;
+}
+.menu-items form input{
+    background: var(--bordes);
+    color: var(--enlaces);
+    padding: .9rem 1.5rem;
+    border: 1px solid #b94460;
+    outline: none;
+    border-radius: 20px;
+}
+.menu-items form input::placeholder{
+    color: var(--enlaces);
+}
+ul.show{
+    left: 0;
+}
+@media screen and (max-width: 860px){
+    .menu-items{
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        height: 100vh;
+        width: 50%;
+        justify-content: flex-start;
+        align-items: flex-start; 
+        left: -100vw;
+        background-color: #bf395c;
+        z-index: 100;
+    }
+    .menu-items li{
+        margin: 0;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+    }
+    .menu-items form{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .menu-items form input {
+        margin: 0;
+        width: 100%;
+        padding: 15px 0px;
+        text-align: center;
+        border-radius: 0px; 
+        border: none;
+    }
+    .menu-items li a:hover{
+        border: 1px solid transparent;
+    }
+    .menu-items li:hover{
+        background-color: tomato;
+    }
+    .img{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .btn-menu{
+        display: inline-flex;
+        z-index: 150;
+    }
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: 80px auto 80px;
+    height: calc(100vh - 80px);
+}
+.icons{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+.redes{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.redes li{
+    list-style: none;
+    margin: 3rem 0;
+    display: block;
+}
+.redes li a{
+    text-decoration: none;
+    color: var(--linea);
+}
+.redes li:last-of-type{
+    margin-bottom: 0;
+}
+.redes li span{
+    display: block;
+    border-left: 2px solid var(--linea);
+    height: 150px;
+    position: relative;
+    left: calc(50% - 1px);
+    z-index: 1;
+}
+.data{
+    align-self: center;
+    margin-left: 5rem;
+}
+.content{
+    border-left: 3px solid var(--enlaces);
+    border-radius: 3px;
+    padding-left: 1.2rem;
+    color: var(--enlaces);
+}
+.content h1{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.contenido p{
+    color: var(--linea);
+    font-size: 1.2rem;
+}
+.contenido button{
+    background-color: transparent;
+    border: 3px solid #2c7470;
+    border-radius: 25px;
+    padding: .8rem 3rem;
+    color: #2c7470;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+}
+@media screen and (max-width:860px){
+    .contenido{
+        grid-template-columns: 40px auto 10px;
+    }
+    .data{
+        margin-left: 5px;
+    }
+}
+/* .sociales ul li a:before{
+    font-family: "Font Awesome 5 Brands";
+    color: var(--obscuro);
+    font-size: 1.8rem;
+}
+.sociales ul li a[href*='facebook.com']::before{
+    content: '\f39e';
+}
+.sociales ul li a[href*='twitter.com']::before{
+    content: '\f099';
+}
+.sociales ul li a[href*='youtube.com']::before{
+    content: '\f167';
+}
+.sociales ul li a[href*='instagram.com']::before{
+    content: '\f16d';
+}
+.sociales ul li a[href*='pinterest.com']::before{
+    content: '\f0d2';
+} */
